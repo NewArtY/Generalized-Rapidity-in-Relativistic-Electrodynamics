@@ -528,7 +528,7 @@ def fig7():
 
     cgrid = np.logspace(np.log10(coup.min() / 1.5),
                         np.log10(coup.max() * 1.5), 100)
-    axb.plot(cgrid, 2.0 * cgrid, "k--", lw=1.1, label=r"$2\,Zr_e/r_0$")
+    axb.plot(cgrid, 2.0 * cgrid, "k--", lw=1.1, label=r"$2\,Zr_e/r_c$")
     axb.plot(coup, scatter, "o", color="#1f77b4", ms=5,
              label="numerical")
     for Z, x, y in zip(Zs, coup, scatter):
@@ -536,7 +536,7 @@ def fig7():
                      xytext=(4, -9), fontsize=BODY_PT)
     axb.set_xscale("log")
     axb.set_yscale("log")
-    axb.set_xlabel(r"coupling $Zr_e/r_0$")
+    axb.set_xlabel(r"coupling $Zr_e/r_c$")
     axb.set_ylabel(r"$\Delta\omega/\omega$")
     axb.set_title("(b) shift vs. coupling")
     axb.grid(True, which="both")
